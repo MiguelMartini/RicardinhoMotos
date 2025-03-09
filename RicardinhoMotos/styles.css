@@ -1,0 +1,405 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth
+}
+::selection{
+    background-color: #C02328;
+}
+body{
+    height: 100vh;
+}
+/* header */
+.header-Container{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: #e9e9e9;
+}
+.logoContainer{
+    width: 50%;
+}
+.imgLogo{
+    width: 50%;
+}
+.pLogo{
+    font-size: 25px;
+    font-style: italic;
+    color: rgb(92, 89, 89);
+}
+.navLinks{
+    height: 40px;
+}
+.linksNav{
+    padding-top: 20px;
+}
+.links{
+    text-decoration: none;
+    color: #5c5959;
+    font-size: 35px;
+    margin: 20px;
+    transition: .2s;
+}
+.links:hover{
+    color: #C02328;
+}
+/* header responsivo */
+@media (max-width: 768px) {
+    .header-Container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .logoContainer {
+        width: 100%;
+        text-align: center;
+    }
+    .imgLogo {
+        width: 80%;
+    }
+    .navLinks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+    .links {
+        font-size: 25px;
+        margin: 20px 10px;
+    }
+}
+
+
+/* sobre container */
+.sobre_container {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    position: relative; /* Necessário para os elementos posicionados dentro */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px; /* Ajuste conforme necessário */
+    width: 100%;
+    overflow: hidden;
+}
+.img_sobre{
+    filter: blur(5px);
+}
+.sobreTitle{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 50px;
+}
+
+.sobre_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.sobre_container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); 
+    z-index: 1; 
+}
+.sobreParagraph{
+    text-shadow: 1px 1px 2px black;
+}
+.texto_sobre {
+    position: relative;
+    z-index: 2; /* Garante que o texto fique sobre a imagem e o gradiente */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    max-width: 60%;
+}
+
+/* sobre responsivo */
+@media (max-width: 768px) {
+    .sobre_container {
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .texto_sobre {
+        max-width: 90%;
+        font-size: 18px;
+    }
+    .sobreTitle {
+        font-size: 35px;
+    }
+}
+
+/* linha mxf container */
+.mxfContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: #E6E6E6;
+    padding-bottom: 70px;
+
+}
+.mxfTitle{
+    margin: 50px;
+    font-size: 40px;
+    color: #E6E6E6;
+    background-color: #C02328;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.ParagraphMxf{
+    font-size: 30px;
+    text-align: center;
+}
+.mxfParagraph{
+    color: #5c5959;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.363);
+}
+.displays{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.veiculoContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+    height: 300px;
+    margin-bottom: 100px;
+}
+.pTitle{
+    font-size: 25px;
+    color: #5c5959;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.363);
+}
+.bike, .ferinha, .proRacing, .attack{
+    width: 600px;
+    
+}
+
+/* mxf responsivo */
+@media (max-width: 768px) {
+    .mxfContainer {
+        padding-bottom: 30px;
+    }
+    .mxfTitle {
+        width: 80%;
+        font-size: 30px;
+    }
+    .veiculoContainer {
+        width: 90%;
+        height: auto;
+    }
+    .bike, .ferinha, .proRacing, .attack {
+        width: 100%;
+    }
+}
+/* Processos */
+.motoTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #5c5959;
+}
+.TitleMoto{
+    font-size: 60px;
+}
+.motoParagraph{
+    font-size: 30px;
+}
+.motocicletasContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+.revisao_container, .estetica_container, .posVenda_container{
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    color: #cccccc;
+    background-color: #C02328;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 100px;
+}
+.revisaoIcon {
+    width: 80px;
+    margin-bottom: 10px;
+}
+.esteticaIcon{
+    width: 100px;
+    margin-bottom: 20px;
+}
+.posVendaIcon{
+    width: 100px;
+    margin-bottom: 1px;
+}
+
+/* motocicletas responsivo */
+@media (max-width: 768px) {
+    .motocicletasContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .motoParagraph{
+        text-align: center;
+    }
+    .revisao_container, .estetica_container, .posVenda_container {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        font-size: 18px;
+    }
+}
+/* contato Container */
+.contatoContainer{
+    background-color: #e7e6e6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+    padding: 60px;
+}
+.contatoTitle{
+    font-size: 60px;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #5c5959;
+    margin-bottom: 10px;
+}
+.paragraphContato{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    color: #5c5959;
+    margin-bottom: 40px;
+}
+.textParagraph{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.formulario{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 300px;
+    width: 400px;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #C02328;
+}
+.titleForm{
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    margin: 5px;
+    color: #E9E9E9;
+}
+.inputForm{
+    background-color: #f7f7f7;
+    color: #444444;
+    font-family: "Poppins", sans-serif;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 15px;
+    outline: none;
+    font-size: 18px;
+}
+.submitButton{
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: #5C5959;
+    color: #E6E6E6;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    transition: .2s;
+}
+.submitButton:hover{
+    background-color: #f7f7f7;
+    color: #C02328;
+}
+/* contato responsivo */
+@media (max-width: 768px) {
+    .contatoContainer {
+        padding: 30px;
+        text-align: center;
+    }
+    .formulario {
+        text-align: start;
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+    .inputForm {
+        font-size: 16px;
+    }
+    .submitButton {
+        font-size: 16px;
+    }
+}
+
+/* contato */
+.copyrights{
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.363);
+}
+.copyrightOwner{
+    margin: 10px;
+}
+.linkCopyright{
+    color: #C02328;
+    text-decoration: none;
+}
+.copyrightCreator{
+    margin-bottom: 50px;
+}
+
+@media (max-width: 480px) {
+    .sobreTitle, .contatoTitle, .TitleMoto {
+        font-size: 30px;
+    }
+    .ParagraphMxf, .motoParagraph, .paragraphContato {
+        font-size: 18px;
+    }
+    .copyrights {
+        font-size: 12px;
+    }
+}
