@@ -65,6 +65,7 @@ body{
         align-items: center;
         flex-wrap: wrap;
         margin-bottom: 50px;
+        text-align: center;
     }
     .links {
         font-size: 25px;
